@@ -47,10 +47,10 @@ export class MinHeap {
    * The time complexity is O(logM).
    * @param item item to add to the heap.
    */
-     add(item: number): void {
-      this.array.push(item);
-      this.siftUp(this.array.length-1);
-    }
+  add(item: number): void {
+    this.array.push(item);
+    this.siftUp(this.array.length-1);
+  }
 
   /**
    * The time complexity is O(logM).

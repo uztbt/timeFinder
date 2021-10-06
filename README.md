@@ -26,6 +26,14 @@ git clone git@github.com:uztbt/timeFinder.git
 cd timeFinder
 yarn
 yarn test
+
+-------------|---------|----------|---------|---------|-------------------
+File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------|---------|----------|---------|---------|-------------------
+All files    |     100 |      100 |     100 |     100 |                   
+ findTime.ts |     100 |      100 |     100 |     100 |                   
+ minHeap.ts  |     100 |      100 |     100 |     100 |                   
+-------------|---------|----------|---------|---------|-------------------
 ```
 
 ## Design Considerations
