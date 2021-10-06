@@ -2,6 +2,8 @@
 
 TypeScript implementation of Time Finder.
 
+![](./doc/png/cover.png)
+
 ## Input
 
 - Schedules of people
@@ -30,7 +32,7 @@ yarn test
 
 ### What is the time complexity of my algorithm?
 
-The time complexity of my algorithm (findTime()) is O(M log M), where M is the number of schedules passed as an argument. I think it is the optimal time complexity because I believe sorting an array of schedules is unavoidable to solve this problem.
+The time complexity of my algorithm, findTime(), is O(M log M), where M is the number of schedules passed as an argument. I think it is the optimal time complexity because I believe sorting an array of schedules is unavoidable to solve this problem in any way.
 
 ![](./doc/png/timeComplexity.png)
 
@@ -43,6 +45,7 @@ I used a min-heap to store unexpired end times in findTime(). I needed the stora
 | Popping | O(log M) | O(1) | O(1) |
 | Insertion | O(log M) | O(M) | O(M) |
 
+Let me elaborate more on some of the time complexities I showed above. Insertion to a sorted linked list takes O(M) time. The worst case is when you iterate over all the items of the list to insert an item to the tail of it. Insertion to a sorted array also takes O(M) time. The worst case is when you insert an item at index 0 of the array; hence you have to shift all the elements by one to the right.
 
 ## Test Cases
 
