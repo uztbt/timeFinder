@@ -11,6 +11,7 @@ TypeScript implementation of Time Finder.
 
 ```bash
 git clone git@github.com:uztbt/timeFinder.git
+cd timeFinder
 yarn
 yarn test
 ```
