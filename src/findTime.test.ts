@@ -20,27 +20,27 @@ const schedules = [
   ...schedulesOfPerson0, ...schedulesOfPerson1, ...schedulesOfPerson2
 ];
 
-test("Meeting from time=0. Extra gap = 0.", () => {
+test("Test 0: Meeting from time=0. Extra gap = 0.", () => {
   const answer = findTime(schedules, 0, 1);
   expect(answer).toBe(0);
 });
 
-test("Meeting in the middle. Extra gap = 1.", () => {
+test("Test 1: Meeting in the middle. Extra gap = 1.", () => {
   const answer = findTime(schedules, 0, 2);
   expect(answer).toBe(10);
 })
 
-test("Meeting in the middle. Extra gap = 0.", () => {
+test("Test 2: Meeting in the middle. Extra gap = 0.", () => {
   const answer = findTime(schedules, 0, 3);
   expect(answer).toBe(10);
 })
 
-test("Meeting in the middle. After time = 1. Extra gap = 0.", () => {
+test("Test 3: Meeting in the middle. After time = 1. Extra gap = 0.", () => {
   const answer = findTime(schedules, 1, 1);
   expect(answer).toBe(6);
 })
 
-test("Meeting after all the schedules.", () => {
+test("Test 4: Meeting after all the schedules.", () => {
   const answer = findTime(schedules, 0, 4);
   expect(answer).toBe(15);
 });
