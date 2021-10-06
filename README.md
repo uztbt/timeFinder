@@ -2,6 +2,16 @@
 
 TypeScript implementation of Time Finder.
 
+## Input
+
+- Schedules of people
+- Point in time after which we find a time for the meeting
+- Minimum amount of time for the meeting
+
+## Output
+
+- The earliest time to start the meeting
+
 ## System Requirements
 
 - node: v16.0.0
