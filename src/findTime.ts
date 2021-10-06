@@ -20,7 +20,7 @@ export function findTime(schedules: Schedule[], after: number, minimumTime: numb
   for (const schedule of filteredSchedules) {
     let lastEndTime = after; // For record
     // Remove all the schedules that end before schedule.start from endTimes
-    while (endTimes.size() >= 0 && endTimes.peek()! <= schedule.start) {
+    while (endTimes.size() > 0 && endTimes.peek()! <= schedule.start) {
       lastEndTime = endTimes.pop()!; // O(logM)
     }
     // Check if
