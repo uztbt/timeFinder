@@ -2,6 +2,8 @@
 
 TypeScript implementation of Time Finder.
 
+**Version 2.0.0 got rid of a MinHeap from the algorithm.**
+
 ![](./doc/png/cover.png)
 
 ## Input
