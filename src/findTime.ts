@@ -1,5 +1,3 @@
-import { MinHeap } from "./minHeap";
-
 export type Schedule = {
   personId: number;
   start: number;
@@ -16,27 +14,17 @@ export type Schedule = {
 export function findTime(schedules: Schedule[], after: number, minimumTime: number) {
   const filteredSchedules = schedules.filter(schedule => schedule.end >= after); // O(M)
   filteredSchedules.sort((a, b) => a.start - b.start); // O(MlogM)
-  const endTimes: MinHeap = new MinHeap(); // O(1)
+  let latestEndTime = after; // O(1)
   for (const schedule of filteredSchedules) {
-    let lastEndTime = after; // For record
-    // Remove all the schedules that end before schedule.start from endTimes
-    while (endTimes.size() > 0 && endTimes.peek()! <= schedule.start) {
-      lastEndTime = endTimes.pop()!; // O(logM)
-    }
-    // Check if
-    // 1. Nobody has any schedule at schedule.start
-    // 2. The gap between schedule.start and lastEndTime is greater than minimumTime
-    if (endTimes.size() == 0 && schedule.start - lastEndTime >= minimumTime) {
-      return lastEndTime;
+    // Check if there is enough time gap
+    // between the latest end time and schedule.start
+    if (schedule.start - latestEndTime >= minimumTime) {
+      return latestEndTime;
     } else {
-      endTimes.add(schedule.end); // O(logM)
+      latestEndTime = Math.max(latestEndTime, schedule.end); // O(1)
     }
   }
   // If the program execution reaches here, it means there is no time for the meeting.
   // Schedule the meeting as soon as when everyone finishes all of their plans.
-  let lastEndTime = after;
-  while (endTimes.size() > 0) {
-    lastEndTime = endTimes.pop()!; // O(logM)
-  }
-  return lastEndTime;
+  return latestEndTime;
 }
