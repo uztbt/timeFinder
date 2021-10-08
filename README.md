@@ -32,8 +32,8 @@ File         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 -------------|---------|----------|---------|---------|-------------------
 All files    |     100 |      100 |     100 |     100 |                   
  findTime.ts |     100 |      100 |     100 |     100 |                   
- minHeap.ts  |     100 |      100 |     100 |     100 |                   
 -------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
 ```
 
 ## Design Considerations
